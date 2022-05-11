@@ -1,0 +1,293 @@
+//----------------------------------------------------------------------------
+// BotProfile.db
+// Author: Michael S. Booth, Turtle Rock Studios (www.turtlerockstudios.com)
+//
+// This database defines bot "personalities". 
+// Feel free to edit it and define your own bots.
+//
+// Place this file in /csgo/
+
+//----------------------------------------------------------------------------
+
+//
+// All profiles begin with this data and overwrite their own
+//
+Default
+	Skill = 100
+	Aggression = 100
+	ReactionTime = 0.01
+	AttackDelay = 0.01
+	Teamwork = 100
+	AimFocusInitial = 0.01 			// initial focus spread in degrees (from desired center)
+	AimFocusDecay = 0.01			// how much focus shrinks per second (.25 = 25% of size after 1 sec)
+	AimFocusOffsetScale = 0.01		// controls accuracy when tracking to target (0 == perfect, should always be < 1)
+	AimfocusInterval = 0.01					// how often focus is adjusted (smaller intervals means better movement tracking)
+	WeaponPreference = CompWeps
+	Cost = 0
+	Difficulty = HARD
+	VoicePitch = 50
+	Skin = 0
+	LookAngleMaxAccelNormal = 33000.0 		// how quickly a bot will move their cross hair look at you (2000.0 default)
+	LookAngleStiffnessNormal = 2000.0 		// how quickly a bot will lock onto you (100.0 default)
+	LookAngleDampingNormal = 90.0			// dampen how much will the bot scan the area while not engaged (25.0 default)
+	LookAngleMaxAccelAttacking = 30000.0		// ??how long a bot will keep an interest in their attacker (3000.0 default)
+	LookAngleStiffnessAttacking = 2000.0		// how soon after spotting will a bot attack (500.0 template)
+	LookAngleDampingAttacking = 90.0	
+End
+
+//----------------------------------------------------------------------------
+
+//
+// These templates inherit from Default and override with their values
+// The name of the template defines a type that is used by individual bot profiles
+//
+
+// weapon preference templates
+Template Rifle
+	WeaponPreference = ak47
+	WeaponPreference = m4a4_silencer
+	WeaponPreference = m4a1_silencer
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp7
+End
+
+Template RifleT
+	WeaponPreference = ak47
+	WeaponPreference = m4a4_silencer
+	WeaponPreference = m4a1_silencer
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp7
+End
+
+Template Punch
+	WeaponPreference = ak47
+	WeaponPreference = m4a4_silencer
+	WeaponPreference = m4a1_silencer
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp7
+End
+
+Template PunchT
+	WeaponPreference = ak47
+	WeaponPreference = m4a4_silencer
+	WeaponPreference = m4a1_silencer
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp7
+End
+
+Template Sniper
+	WeaponPreference = awp
+	WeaponPreference = scar20
+	WeaponPreference = g3sg1
+	WeaponPreference = ssg08
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+End
+
+Template Power
+	WeaponPreference = m249
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+End
+
+Template Shotgun
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+End
+
+Template Spray
+	WeaponPreference = p90
+	WeaponPreference = mp9
+	WeaponPreference = mac10
+	WeaponPreference = mp7
+End
+
+
+// skill templates
+Template Elite
+	Skill = 100
+	Rank = 1800
+	Aggression = 100
+	ReactionTime = 0.01
+	Cost = 4
+	Difficulty = EXPERT
+	VoicePitch = 85
+	AimFocusInitial = 0.01
+	AimFocusDecay = 0.01
+	AimFocusOffsetScale = 0.01
+	AimfocusInterval = 0.01
+End
+
+Template Expert
+	Skill = 100
+	Rank = 1800
+	Aggression = 100
+	ReactionTime = 0.1
+	Cost = 4
+	Difficulty = HARD
+	VoicePitch = 85
+	AimFocusInitial = 0.01
+	AimFocusDecay = 0.01
+	AimFocusOffsetScale = 0.01
+	AimfocusInterval = 0.01
+End
+
+Template VeryHard
+	Skill = 100
+	Rank = 1800
+	Aggression = 100
+	ReactionTime = 0.01
+	Cost = 4
+	Difficulty = HARD
+	VoicePitch = 85
+	AimFocusInitial = 0.1
+	AimFocusDecay = 0.01
+	AimFocusOffsetScale = 0.01
+	AimfocusInterval = 0.01
+End
+
+Template Hard
+	Skill = 75
+	Rank = 1300
+	Aggression = 60
+	ReactionTime = 0.40
+	Cost = 3
+	Difficulty = HARD
+	VoicePitch = 94
+	AimFocusInitial = 10
+	AimFocusDecay = 0.4
+	AimFocusOffsetScale = 0.20
+	AimfocusInterval = 0.40
+End
+
+Template Tough
+	Skill = 60
+	Rank = 1100
+	Aggression = 45
+	ReactionTime = 0.50
+	AttackDelay = .70
+	Cost = 2
+	Difficulty = HARD
+	VoicePitch = 96
+	AimFocusInitial = 10
+	AimFocusDecay = 0.4
+	AimFocusOffsetScale = 0.25
+	AimfocusInterval = 0.50
+End
+
+Template Normal
+	Skill = 50
+	Rank = 1000
+	Aggression = 30
+	ReactionTime = 0.60
+	AttackDelay = .80
+	Cost = 2
+	Difficulty = NORMAL
+	AimFocusInitial = 12
+	AimFocusDecay = 0.5
+	AimFocusOffsetScale = 0.35
+	AimfocusInterval = 0.60
+End
+
+Template Fair
+	Skill = 25
+	Rank = 850
+	Aggression = 15
+	ReactionTime = 0.60
+	AttackDelay = .90
+	Cost = 1
+	Difficulty = NORMAL
+	VoicePitch = 105
+	AimFocusInitial = 17
+	AimFocusDecay = 0.6
+	AimFocusOffsetScale = 0.5
+	AimfocusInterval = 0.70
+End
+
+Template Easy
+	Skill = 5
+	Rank = 600
+	Aggression = 10
+	ReactionTime = 0.60
+	AttackDelay = .70
+	Cost = 1
+	Difficulty = EASY
+	VoicePitch = 110
+	AimFocusInitial = 20
+	AimFocusDecay = 0.7
+	AimFocusOffsetScale = 0.6
+	AimfocusInterval = 0.70
+End
+
+//----------------------------------------------------------------------------
+//
+// These are the individual bot profiles, which inherit first from 
+// Default and then the specified Template(s), in order
+//
+
+
+Elite+PunchT flusha
+	Skin = 1
+	VoicePitch = 95
+End
+
+Elite+PunchT olof
+	Skin = 4
+	VoicePitch = 84
+End
+
+Elite+PunchT s1mple
+	Skin = 4
+	VoicePitch = 110
+End
+
+Elite+Rifle Rock
+	Skin = 2
+	VoicePitch = 80
+End
+
+Elite+PunchT Shark
+	Skin = 4
+	VoicePitch = 90
+End
+
+Elite+Rifle Wolf
+	Skin = 2
+	VoicePitch = 98
+End
+
+Elite+RifleT Gunner
+	Skin = 1
+	VoicePitch = 96
+End
+
+Elite+Sniper KennyS
+	Skin = 3
+	VoicePitch = 105
+End
+
+Elite+Sniper dev1ce
+	Skin = 3
+	VoicePitch = 115
+End
+
+Elite+RifleT Boombl4
+	Skin = 1
+	VoicePitch = 84
+End
+
+Elite+PunchT Yeetus
+	Skin = 4
+	VoicePitch = 86
+End
